@@ -24,6 +24,7 @@ class TodoService:
             category=todo_data.category.value,
         )
         return Todo.model_validate(todo)
+
     def update_todo(self, todo_id: str, todo_data: TodoUpdate) -> Todo | None:
         """Update a todo, or return None if it does not exist."""
         todo = self.repository.update(
