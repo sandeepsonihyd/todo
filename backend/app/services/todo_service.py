@@ -22,7 +22,10 @@ class TodoService:
         )
         return Todo.model_validate(todo)
 
+    
+
     def update_todo(self, todo_id: str, todo_data: TodoUpdate) -> Todo | None:
+        #This method is 
         todo = self.repository.update(
             my_todo_id=todo_id,
             title=todo_data.title,
@@ -39,7 +42,7 @@ class TodoService:
         status_data: TodoStatusUpdate,
     ) -> Todo | None:
         todo = self.repository.update_status(
-            todo_id=todo_id,
+            my_todo_id=todo_id,
             is_completed=status_data.is_completed,
         )
         if todo is None:

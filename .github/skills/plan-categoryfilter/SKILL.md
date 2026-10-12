@@ -1,3 +1,8 @@
+---
+name: plan-categoryfilter
+description: plan-categoryFilter
+disable-model-invocation: true
+---
 # Plan: Client-side Category Filter for Todo List
 
 Add a dropdown above the todo list that filters the already-fetched todos by category, entirely client-side in React state. No backend changes.
