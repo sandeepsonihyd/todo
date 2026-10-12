@@ -22,6 +22,7 @@ class TodoBase(BaseModel):
     @field_validator("title")
     @classmethod
     def validate_title(cls, value: str | None) -> str:
+        """Reject blank titles and strip surrounding whitespace."""
         if value is None or value.strip() == "":
             raise ValueError("Title is required")
         return value.strip()
